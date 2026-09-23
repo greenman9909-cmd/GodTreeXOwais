@@ -2,18 +2,42 @@
 
 Agentic desktop operating system for AI-powered workflows.
 
-## Vision
-GodTreeXOwais is a Windows application that orchestrates agents, tools, workflows and project automation from a single interface.
+## Overview
+GodTreeXOwais is a Windows desktop platform designed to orchestrate AI agents, tools, workflows and project automation from a single interface.
+
+## Features
+
+- Desktop application shell
+- Agent runtime
+- Workflow execution engine
+- Tool registry
+- Persistent memory layer
+- Git automation support
+- Configuration system
+- Automated verification pipeline
 
 ## Architecture
 
-- Desktop UI
-- Agent Runtime
-- Tool Registry
-- Workflow DAG Engine
-- Memory Layer
-- Git Integration
-- Export Pipeline
+```
+UI
+ |
+Runtime Engine
+ |
+Agents + Tools
+ |
+Memory + Integrations
+ |
+Export / Build Pipeline
+```
 
-## Target
+## Build Target
+
 Windows 10/11 executable (.exe)
+
+## Development
+
+Run the application entry point:
+
+```
+python src/main.py
+```
