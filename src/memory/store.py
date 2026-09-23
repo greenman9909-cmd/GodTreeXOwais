@@ -1,0 +1,16 @@
+import json
+
+class MemoryStore:
+    def __init__(self, path='memory.json'):
+        self.path = path
+
+    def save(self, data):
+        with open(self.path,'w') as f:
+            json.dump(data,f,indent=2)
+
+    def load(self):
+        try:
+            with open(self.path) as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return {}
