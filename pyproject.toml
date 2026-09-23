@@ -1,0 +1,8 @@
+[project]
+name = "godtreexowais"
+version = "0.1.0"
+description = "Agentic desktop automation platform"
+requires-python = ">=3.10"
+
+[project.scripts]
+godtree = "src.main:main"
