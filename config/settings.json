@@ -1,0 +1,6 @@
+{
+  "app": "GodTreeXOwais",
+  "version": "0.1.0",
+  "runtime": "agent-tree",
+  "database": "godtree.db"
+}
