@@ -1,0 +1,34 @@
+name: GodTree Release Build
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build GodTree EXE
+        run: pyinstaller godtree.spec
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: GodTree-Windows
+          path: dist/GodTree.exe
